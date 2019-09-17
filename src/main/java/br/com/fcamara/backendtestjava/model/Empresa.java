@@ -3,65 +3,60 @@ package br.com.fcamara.backendtestjava.model;
 import javax.persistence.Entity;
 
 @Entity
-public class Empresa extends AbstractEntity<Long> {
+public class Empresa extends AbstractEntity {
 
-    private String nome;
+  private String nome;
+  private String cnpj;
+  private String endereco;
+  private String telefone;
+  private int quantidadeVagasMotos;
+  private int quantidadeVagasCarros;
 
-    private String cnpj;
+  public String getNome() {
+    return nome;
+  }
 
-    private String endereco;
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 
-    private String telefone;
+  public String getCnpj() {
+    return cnpj;
+  }
 
-    private int quantidadeVagasMotos;
+  public void setCnpj(String cnpj) {
+    this.cnpj = cnpj;
+  }
 
-    private int quantidadeVagasCarros;
+  public String getEndereco() {
+    return endereco;
+  }
 
-    public String getNome() {
-        return nome;
-    }
+  public void setEndereco(String endereco) {
+    this.endereco = endereco;
+  }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+  public String getTelefone() {
+    return telefone;
+  }
 
-    public String getCnpj() {
-        return cnpj;
-    }
+  public void setTelefone(String telefone) {
+    this.telefone = telefone;
+  }
 
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
-    }
+  public int getQuantidadeVagasMotos() {
+    return quantidadeVagasMotos;
+  }
 
-    public String getEndereco() {
-        return endereco;
-    }
+  public void setQuantidadeVagasMotos(int quantidadeVagasMotos) {
+    this.quantidadeVagasMotos = quantidadeVagasMotos;
+  }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
+  public int getQuantidadeVagasCarros() {
+    return quantidadeVagasCarros;
+  }
 
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public int getQuantidadeVagasMotos() {
-        return quantidadeVagasMotos;
-    }
-
-    public void setQuantidadeVagasMotos(int quantidadeVagasMotos) {
-        this.quantidadeVagasMotos = quantidadeVagasMotos;
-    }
-
-    public int getQuantidadeVagasCarros() {
-        return quantidadeVagasCarros;
-    }
-
-    public void setQuantidadeVagasCarros(int quantidadeVagasCarros) {
-        this.quantidadeVagasCarros = quantidadeVagasCarros;
-    }
+  public void setQuantidadeVagasCarros(int quantidadeVagasCarros) {
+    this.quantidadeVagasCarros = quantidadeVagasCarros;
+  }
 }

@@ -3,58 +3,67 @@ package br.com.fcamara.backendtestjava.model;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.ManyToOne;
 
 @Entity
-public class Veiculo extends AbstractEntity<Long> {
+public class Veiculo extends AbstractEntity {
 
-    private String marca;
+  private String marca;
+  private String modelo;
+  private String cor;
+  private String placa;
 
-    private String modelo;
+  @ManyToOne
+  private Empresa estabelecimento;
 
-    private String cor;
+  @Enumerated(EnumType.STRING)
+  private TipoVeiculo tipo;
 
-    private String placa;
+  public String getMarca() {
+    return marca;
+  }
 
-    @Enumerated(EnumType.STRING)
-    private TipoVeiculo tipo;
+  public void setMarca(String marca) {
+    this.marca = marca;
+  }
 
-    public String getMarca() {
-        return marca;
-    }
+  public String getModelo() {
+    return modelo;
+  }
 
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
+  public void setModelo(String modelo) {
+    this.modelo = modelo;
+  }
 
-    public String getModelo() {
-        return modelo;
-    }
+  public String getCor() {
+    return cor;
+  }
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
+  public void setCor(String cor) {
+    this.cor = cor;
+  }
 
-    public String getCor() {
-        return cor;
-    }
+  public String getPlaca() {
+    return placa;
+  }
 
-    public void setCor(String cor) {
-        this.cor = cor;
-    }
+  public void setPlaca(String placa) {
+    this.placa = placa;
+  }
 
-    public String getPlaca() {
-        return placa;
-    }
+  public TipoVeiculo getTipo() {
+    return tipo;
+  }
 
-    public void setPlaca(String placa) {
-        this.placa = placa;
-    }
+  public void setTipo(TipoVeiculo tipo) {
+    this.tipo = tipo;
+  }
 
-    public TipoVeiculo getTipo() {
-        return tipo;
-    }
+  public Empresa getEstabelecimento() {
+    return estabelecimento;
+  }
 
-    public void setTipo(TipoVeiculo tipo) {
-        this.tipo = tipo;
-    }
+  public void setEstabelecimento(Empresa estabelecimento) {
+    this.estabelecimento = estabelecimento;
+  }
 }
