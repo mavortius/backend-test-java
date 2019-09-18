@@ -7,9 +7,9 @@ import org.springframework.stereotype.Repository;
 import static br.com.fcamara.backendtestjava.query.VeiculoQuery.VEICULO;
 
 @Repository
-public class VeiculoRepositoy extends QueryDslRepository<Veiculo, Long> {
+public class VeiculoRepository extends QueryDslRepository<Veiculo, Long> {
 
-  public VeiculoRepositoy() {
+  public VeiculoRepository() {
     super(VEICULO);
   }
 }
